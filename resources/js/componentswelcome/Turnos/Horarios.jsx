@@ -5,16 +5,8 @@ export default function Horarios({ horarios, onSeleccionarHora, seleccionHora })
         <button
           key={idx}
           onClick={() => onSeleccionarHora(hora)}
-          className={`
-            px-4 py-3 
-            rounded-full 
-            text-sm font-medium
-            transition-all duration-200 
-            hover:shadow-lg
-            active:scale-95
-            mt-3
-            ${seleccionHora === hora ? "bg-gray-800 text-white hover:bg-gray-700" : "bg-white text-black border border-black"}
-          `}
+          className={`px-4 py-3 rounded-full text-sm font-medium transition-all duration-200 hover:shadow-lg active:scale-95 mt-3
+            ${seleccionHora === hora ? "bg-gray-800 text-white hover:bg-gray-700" : "bg-white text-black border border-black"}`}
         >
           {hora}
         </button>
