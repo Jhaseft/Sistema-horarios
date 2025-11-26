@@ -2,12 +2,14 @@ export default function AgendarButton({ hora, visible, onClick }) {
   return (
     <div
       className={`
-        fixed 
-        md:bottom-5 md:right-10 bottom-4 left-[65%] md:left-[80%] transform -translate-x-1/2
-        md:w-auto w-[90%]
-        z-50
+        fixed text-center bottom-4 z-50
+        md:bottom-5 md:right-5 md:left-auto
+        w-[90%] md:w-auto
         transition-all duration-300
         ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6 pointer-events-none"}
+        ${hora ? "" : "hidden"}
+        md:translate-x-0
+        left-1/2 transform -translate-x-1/2 md:left-auto
       `}
     >
       {hora && (
